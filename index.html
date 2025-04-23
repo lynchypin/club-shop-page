@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAA Club - Shop</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1B1B4B;
+            --accent-red: #CC0000;
+        }
+        
+        .club-nav-item:hover {
+            border-bottom: 2px solid var(--accent-red);
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+        }
+
+        .size-guide-table th,
+        .size-guide-table td {
+            padding: 0.75rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+
+        .category-active {
+            background-color: #1B1B4B;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-[#1B1B4B] text-white">
+        <!-- Top Bar -->
+        <div class="bg-[#CC0000] py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="text-sm">
+                    Free Shipping on Orders Over €75
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="text-sm hover:text-gray-200">Size Guide</a>
+                    <a href="#cart" class="text-sm hover:text-gray-200">Cart (0)</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="https://lynchypin.github.io/club-home-page/">
+                        <img src="https://placehold.co/150x60" alt="Club Logo" class="h-15">
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex gap-6">
+                    <a href="https://lynchypin.github.io/club-home-page/" class="club-nav-item py-2">Home</a>
+                    <a href="https://lynchypin.github.io/club-about-page/" class="club-nav-item py-2">About</a>
+                    <a href="https://lynchypin.github.io/club-teams-page/" class="club-nav-item py-2">Teams</a>
+                    <a href="https://lynchypin.github.io/club-fixtures-page/" class="club-nav-item py-2">Fixtures</a>
+                    <a href="https://lynchypin.github.io/club-news-page/" class="club-nav-item py-2">News</a>
+                    <a href="https://lynchypin.github.io/club-shop-page/" class="club-nav-item py-2">Shop</a>
+                    <a href="https://lynchypin.github.io/club-sponsors-page/" class="club-nav-item py-2">Sponsors</a>
+                    <a href="https://lynchypin.github.io/club-contact-page/" class="club-nav-item py-2">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Banner -->
+    <section class="bg-[#1B1B4B] text-white py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4">Club Shop</h1>
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="https://lynchypin.github.io/club-home-page/">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
+                        </svg>
+                    </li>
+                    <li>Shop</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Featured Product -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400" alt="New Season Jersey" class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 bg-[#CC0000] text-white px-4 py-2 rounded-lg">
+                            New Release
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold mb-4">2025 Home Jersey</h2>
+                        <p class="text-2xl font-bold text-[#CC0000] mb-4">€65.00</p>
+                        <p class="text-gray-600 mb-6">
+                            The official 2025 home jersey, featuring our traditional colors and modern design.
+                            Made with moisture-wicking fabric for maximum comfort during play.
+                        </p>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 mb-2">Select Size</label>
+                            <div class="flex gap-2">
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">XS</button>
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">S</button>
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">M</button>
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">L</button>
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">XL</button>
+                                <button class="px-4 py-2 border rounded-lg hover:bg-gray-100">XXL</button>
+                            </div>
+                        </div>
+                        <button class="w-full bg-[#1B1B4B] text-white py-3 rounded-lg hover:bg-opacity-90 mb-4">
+                            Add to Cart
+                        </button>
+                        <a href="#size-guide" class="text-sm text-gray-600 hover:underline">View Size Guide</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="category-active px-6 py-2 rounded-lg border border-[#1B1B4B]">
+                    All Products
+                </button>
+                <button class="px-6 py-2 rounded-lg border border-[#1B1B4B] hover:bg-[#1B1B4B] hover:text-white">
+                    Match Day Wear
+                </button>
+                <button class="px-6 py-2 rounded-lg border border-[#1B1B4B] hover:bg-[#1B1B4B] hover:text-white">
+                    Training Gear
+                </button>
+                <button class="px-6 py-2 rounded-lg border border-[#1B1B4B] hover:bg-[#1B1B4B] hover:text-white">
+                    Leisure Wear
+                </button>
+                <button class="px-6 py-2 rounded-lg border border-[#1B1B4B] hover:bg-[#1B1B4B] hover:text-white">
+                    Accessories
+                </button>
+                <button class="px-6 py-2 rounded-lg border border-[#1B1B4B] hover:bg-[#1B1B4B] hover:text-white">
+                    Kids Collection
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
+                    <img src="https://placehold.co/300x300" alt="Training Jersey" class="w-full">
+                    <div class="p-4">
+                        <h3 class="font-bold mb-2">Training Jersey</h3>
+                        <p class="text-gray-600 mb-2">€45.00</p>
+                        <button class="w-full bg-[#1B1B4B] text-white py-2 rounded-lg hover:bg-[#CC0000]">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- More product cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide -->
+    <section id="size-guide" class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Size Guide</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-x-auto">
+                <table class="w-full size-guide-table">
+                    <thead class="bg-[#1B1B4B] text-white">
+                        <tr>
+                            <th>Size</th>
+                            <th>Chest (cm)</th>
+                            <th>Waist (cm)</th>
+                            <th>Hip (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>86-91</td>
+                            <td>71-76</td>
+                            <td>86-91</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>91-96</td>
+                            <td>76-81</td>
+                            <td>91-96</td>
+                        </tr>
+                        <!-- More size rows... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping Information -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#1B1B4B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">Free Shipping</h3>
+                    <p class="text-gray-600">On orders over €75</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#1B1B4B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">Secure Payment</h3>
+                    <p class="text-gray-600">100% secure payment</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-[#1B1B4B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-2">Easy Returns</h3>
+                    <p class="text-gray-600">30-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Preview -->
+    <div id="cart" class="fixed top-0 right-0 h-full w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold">Shopping Cart</h3>
+                <button class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="empty-cart text-center py-8">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+                <p class="text-gray-500">Your cart is empty</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1B1B4B] text-white pt-12 pb-6">
+        <!-- Footer content same as other pages -->
+    </footer>
+
+    <!-- JavaScript for cart functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cart toggle
+            const cartButton = document.querySelector('a[href="#cart"]');
+            const cart = document.querySelector('#cart');
+            const closeCart = cart.querySelector('button');
+
+            cartButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                cart.classList.toggle('translate-x-full');
+            });
+
+            closeCart.addEventListener('click', () => {
+                cart.classList.add('translate-x-full');
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:flex');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Category buttons
+            const categoryButtons = document.querySelectorAll('[class*="category"]');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    categoryButtons.forEach(btn => btn.classList.remove('category-active'));
+                    button.classList.add('category-active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
